@@ -1,0 +1,175 @@
+/* Import font dari Google Fonts (opsional) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #FF6B35; /* Vibrant orange-red */
+    --secondary-color: #F7931E; /* Bright orange */
+    --accent-color: #38A169; /* Green accent */
+    --background-light: #FFF8E1; /* Light cream */
+    --background-card: #FFFFFF; /* White */
+    --text-dark: #2D3748; /* Dark gray */
+    --text-light: #FFFFFF; /* White */
+    --border-color: #E2E8F0; /* Light gray border */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    
+    color: azure;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Gaya untuk Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-image: url('landscape.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-light);
+}
+
+.hero p {
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+#showFactBtn {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#showFactBtn:hover {
+    background-color: var(--accent-color);
+}
+
+.fact-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    min-height: 30px; /* Untuk menjaga ruang */
+    background-color: rgba(56, 161, 105, 0.1); /* Light green accent */
+}
+
+/* Gaya untuk Card Container */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--background-card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    flex: 1;
+    min-width: 280px;
+    max-width: 45%;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: var(--primary-color);
+    color: var(--text-light);
+    margin-top: 40px;
+}
+
+/* Media Queries untuk responsif */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
